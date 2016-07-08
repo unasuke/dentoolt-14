@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>unasuke.comをやっていく技術</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+            # unasuke.comをやっていく技術
+
+            2016-06-12 Dentoo.LT #14
+
+            うなすけ
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/icon.jpg'>
+          <script type="text/template">
+            ## 誰
+
+            - うなすけ
+            - 株式会社spice life所属
+            - 開発部 TMIX開発担当 インフラ部所属
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/spicelife.png'>
+          <script type="text/template">
+            ## 誰
+
+            - うなすけ
+            - 株式会社spice life所属
+            - 開発部 TMIX開発担当 インフラ部所属
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/tmix.png'>
+          <script type="text/template">
+            ## 誰
+
+            - うなすけ
+            - 株式会社spice life所属
+            - 開発部 TMIX開発担当 インフラ部所属
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/icon.jpg'>
+          <script type="text/template">
+            ## 誰
+
+            - うなすけ
+            - 株式会社spice life所属
+            - 開発部 TMIX開発担当 インフラ部所属
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+
+            ![金](img/money-bag.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## おわり
+
+            ご静聴ありがとうございました
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comとは？
+
+            [https://unasuke.com](https://unasuke.com)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comとは？
+
+            ~~ポートフォリオサイト~~
+
+            自己満足webサイト
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+
+            ![金](img/money-bag-small.png)
+
+            for
+
+            sponsors
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+            [https://unasuke.com/sponsor/](https://unasuke.com/sponsor/)
+
+            ![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+            [https://steers.jp/c/6b819cbcc96b6727](https://steers.jp/c/6b819cbcc96b6727)
+
+            ![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)![pray](img/pray.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+
+            __unasuke.com powered by STEERS__
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## STEERSをやっていく技術
+
+            - Rails
+            - JavaScript
+            - puppet
+            - AWS
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+
+            - ~~Rails~~
+            - ~~JavaScript~~
+            - ~~puppet~~
+            - ~~AWS~~
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## もくじ
+            - unasuke.comをつくる技術
+              - html
+              - CSS
+            - unasuke.comを配信する技術
+              - Infrastructure as Code
+              - web server
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### html
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### html
+            [https://github.com/unasuke/unasuke.com](https://github.com/unasuke/unasuke.com)
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/middleman-logo.svg' data-background-color='#f3c859'>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### build html from middleman
+            [https://github.com/unasuke/unasuke.com](https://github.com/unasuke/unasuke.com)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### うなすけくんのmiddleman採用事例
+            - [n0h0.com](https://n0h0.com/)
+            - [blog.unasuke.com](https://blog.unasuke.com/)
+            - [unasuke.com](https://unasuke.com/) ← new!
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### why middleman?
+            - Rubyだから
+            - 業務で触ったことがあったから
+            - ~~あたまがわるくてjekyllがわからなかったから~~
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman
+            ![github 1](img/github-1.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman
+            ![github 2](img/github-2.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman
+            ![github 3](img/github-3.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをやっていく技術
+
+            - ~~rails~~
+            - ~~javascript~~
+            - ~~puppet~~
+            - ~~aws~~
+
+            <small>※ slide 15</small>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman
+            ![github 3](img/github-3.png)
+
+            なんで npm が？？？
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman v4
+            フロントエンド界のエコシステムの流れが早い
+
+            ↓
+
+            やってらんねー
+
+            ↓
+
+            sprockets外すか
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman v4
+            middleman < `external_pipeline`つかってね
+
+            <br><br><br>
+            <small>だいぶ適当なこと言ってます</small>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### middleman v4
+            SCSSをかく
+
+            ↓
+
+            node-sassでCSSにコンパイル
+
+            ↓
+
+            middlemanでCSSを読み込む
+          </script>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>middleman v4</h3>
+          <pre><code class='ruby' data-trim>
+#config.rb
+activate :external_pipeline,
+  name: :npm,
+  command: "npm run sass",
+  source: ".tmp/dest"
+          </code></pre>
+          <pre><code class='json' data-trim>
+//package.json
+{ ...
+  "scripts": {
+    "sass": "for file in `ls -1 source/stylesheets/[!_]*.scss`; do
+              node-sass $file -o source/stylesheets/dest/; done"
+  }, ...
+}
+          </code></pre>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## もくじ
+            - unasuke.comをつくる技術
+              - html(done)
+              - CSS
+            - unasuke.comを配信する技術
+              - Infrastructure as Code
+              - web server
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### CSS
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### CSS
+            ![neat](img/neat.svg)
+
+            [http://neat.bourbon.io/](http://neat.bourbon.io/)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### why bourbon neat?
+            - クリーンなマークアップ
+            - レスポンシブ
+            - ~~たまにはbootstrap以外に手を出してもええやろ！！~~
+          </script>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>example of bourbon neat</h3>
+          <pre><code class='haml' data-trim>
+/haml
+%section.sponsors
+  - sponsors.each_slice(3) do |_sponsors|
+    .row
+      - _sponsors.each do |person, data|
+        .sponsor
+          .card
+            = image_tag "sponsors/#{data['image']}", class: "image"
+            .name
+              = data["name"]
+            .account
+              %span: i.fa.fa-twitter
+              %span
+                %a.link[href="https://twitter.com/#{data["twitter"]}"]
+                  = data["twitter"]
+          </code></pre>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>example of bourbon neat</h3>
+          <pre><code class='scss' data-trim>
+//scss(一部)
+.sponsors {
+  margin-bottom: 50px;
+  @include outer-container(70%);
+
+  .row {
+  @include outer-container();
+    margin-bottom: 25px;
+
+    .sponsor {
+      @include span-columns(4);
+      min-width: 100px;
+      padding: 0 20px 0 20px;
+
+      @media screen and (max-width: 426px){
+
+        @include span-columns(12);
+        padding: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+          </code></pre>
+          <p>scssは長くなるから各自見てほしさ</p>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## もくじ
+            - unasuke.comをつくる技術
+              - html(done)
+              - CSS(done)
+            - unasuke.comを配信する技術
+              - Infrastructure as Code
+              - web server
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### Infrastructure as Code
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### Infrastructure as Code
+            な に も や っ て な い で す
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## もくじ
+            - unasuke.comをつくる技術
+              - html(done)
+              - CSS(done)
+            - unasuke.comを配信する技術
+              - Infrastructure as Code(done)
+              - web server
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(hosting service)
+          </script>
+        </section>
+        <section data-markdown data-background-image='img/gmo-conoha.png'>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(hosting service)
+            GMO Conoha
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### why GMO Conoha?
+            - 時間あたり課金なので気軽にインスタンスを立てれる
+            - どのポートを開けるかの設定が簡単(iptables不要)
+            - ~~豊富なAPI(使ってないけど)~~
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(http server)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(http server)
+
+            H2O
+
+            [https://github.com/h2o/h2o](https://github.com/h2o/h2o)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### why H2O?
+            - http2に対応してるから
+            - ~~あたまがわるくてApacheがわからなかったから~~
+            - ~~あたまがわるくてnginxがわからなかったから~~
+          </script>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>H2O</h3>
+          <pre><code class='accesslog' data-trim>
+root@dea852228130:/# apt search h2o
+Sorting... Done
+Full Text Search... Done
+fh2odg/xenial 0.9.4-4build4 amd64
+  Freehand to OpenDocument converter
+          </code></pre>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>H2O</h3>
+          <pre><code class='accesslog' data-trim>
+root@dea852228130:/# apt search h2o
+Sorting... Done
+Full Text Search... Done
+fh2odg/xenial 0.9.4-4build4 amd64
+  Freehand to OpenDocument converter
+          </code></pre>
+          <p>パッケージがない！！！</p>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### H2O
+
+            ![h2o-1](img/h2o-1.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### H2O
+
+            ![h2o-2](img/h2o-2.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### H2O
+
+            ![h2o-3](img/h2o-3.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### Docker
+
+            ![docker](img/docker.png)
+          </script>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>run H2O on the docker</h3>
+          <pre><code class='dockerfile' data-trim>
+FROM alpine
+RUN apk update && apk upgrade
+
+RUN apk update \
+    && apk upgrade \
+    && apk add -U perl openssl \
+    && apk add -U build-base \
+               cmake \
+               curl \
+               linux-headers \
+               zlib-dev \
+               ca-certificates curl wget ruby ruby-dev bison \
+    && wget -O - https://github.com/h2o/h2o/archive/v1.7.2.tar.gz | tar xz \
+        && cd h2o-* \
+        && cmake -DWITH_BUNDLED_SSL=on -DWITH_MRUBY=on . \
+        && make install \
+        && cd .. \
+        && rm -rf h2o-* \
+    && apk del build-base \
+    && rm -rf /var/cache/apk/*
+
+RUN mkdir /etc/h2o
+WORKDIR /etc/h2o
+EXPOSE 80 443
+          </code></pre>
+          <a href='https://hub.docker.com/r/unasuke/h2o-alpine/'>https://hub.docker.com/r/unasuke/h2o-alpine/</a>
+        </section>
+        <section>
+          <h2>unasuke.comをつくる技術</h2>
+          <h3>h2o.conf</h3>
+          <pre><code class='yaml' data-trim>
+# h2o.conf (一部)
+hosts:
+  "unasuke.com:80":
+    listen:
+      port: 80
+    paths:
+      "/":
+        redirect: https://unasuke.com/
+  "unasuke.com:443":
+    listen:
+      port: 443
+      ssl:
+        certificate-file: /etc/letsencrypt/live/unasuke.com/fullchain.pem
+        key-file:         /etc/letsencrypt/live/unasuke.com/privkey.pem
+    paths:
+      "/":
+        file.dir: /var/web/unasuke.com/
+          </code></pre>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### Docker
+            
+            Infrastructure as Codeやらなくてすんだ！！！
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(certificate)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(certificate)
+
+            いっちょまえにhttps
+
+            ![https](img/unasuke-com-https.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### web server(certificate)
+
+            Let's Encrypt
+
+            ![https detail](img/unasuke-com-https-detail.png)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### why let's encrypt?
+            - free
+            - 更新が自動
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## unasuke.comをつくる技術
+            ### let's encrypt
+
+            [https://certbot.eff.org/](https://certbot.eff.org/)
+
+            ![certbot](img/certbot.png)
+
+            one binaryでacmeで最高
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## もくじ
+            - unasuke.comをつくる技術
+              - html(done)
+              - CSS(done)
+            - unasuke.comを配信する技術
+              - Infrastructure as Code(done)
+              - web server(done)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## おさらい
+            - middleman
+            - npm
+            - bourbon neat
+            - GMO Conoha
+            - H2O
+            - Docker
+            - Let's Encrypt
+            - 金
+          </script>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
